@@ -45,7 +45,21 @@ const shadowHeader=()=>{
 window.addEventListener('scroll', shadowHeader)
 
 /*=============== CONTACT EMAIL JS ===============*/ 
+const contactForm = document.getElementById()
+    contactMessage = document.getElementById('contact-message')
 
+const sendEmail = (e)=>{
+    e.preventDefault()
+
+    emailjs.sendForm('service_vq9yszn', 'YOUR_TEMPLATE_ID', '#contact-form', '5ONEMFFaGmHFn4yyV').then(
+  (response) => {
+    console.Message.textContent("Message sent successfully ✅");
+  },
+  (error) => {
+    console.Message.textContent("Message not sent (service error) ❌");
+  },
+);
+}
 
 /*=============== SHOW SCROLL UP ===============*/ 
 
